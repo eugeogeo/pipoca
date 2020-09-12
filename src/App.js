@@ -47,13 +47,13 @@ function App() {
       <CssBaseline/>
       <Grid container direction="column" justify="center" alignItens="center">
         <Grid item xs={12}>
-          <Typography variant="h3">
+          <Typography variant="h4">
             Usuários
           </Typography>
           <Usuarios/>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="h3">
+          <Typography variant="h4">
             Filmes
           </Typography>
           <Filmes/>
