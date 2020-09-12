@@ -10,7 +10,6 @@ http://dontpad.com/cafecomcanela/
 - [ ] Ver lista de filmes assistidos e desejos de determinado jogador
 
 ## Modelagem do banco
-(Acho que não precisa de banco. Podemos usar um arquivo .json e editar ele)
 ```json
 {
   "usuarios": [
