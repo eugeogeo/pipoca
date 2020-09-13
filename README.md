@@ -20,7 +20,7 @@ http://dontpad.com/cafecomcanela/
       "qtdDeFilmesParaAssistir":""
     }
   ],
-  "filmes":[
+  "filmes": [
     {
       "idFilme":"",
       "quemAssistiu":[{"userId": 0}],

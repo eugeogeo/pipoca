@@ -37,10 +37,10 @@ function App() {
   const themeConfig = createMuiTheme(theme)
   useEffect(() => {
     const userTheme = localStorage.getItem('@pipoca/theme')
-    userTheme==='dark'&&toogleDarkMode()
+    userTheme==='dark'&& toogleDarkMode()
   }, [])
 
-  const classes = stylesObject()
+  const classes = stylesObject();
 
   return (
     <ThemeProvider theme={themeConfig}>
@@ -59,6 +59,7 @@ function App() {
           <Filmes/>
         </Grid>
       </Grid>
+  
     </ThemeProvider>
   );
 }

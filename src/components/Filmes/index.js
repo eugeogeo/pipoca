@@ -1,41 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Button,
   Card,
   CardActions,
   CardContent,
+  Chip,
   Grid,
   Typography,
 } from '@material-ui/core'
 
 import { stylesObject } from '../../assets/styles/stylesObject.js'
 
+import { getGeneros } from '../../utils/tmdb.js'
+
+function chipGenero(genero) {
+  return (
+    <Grid item>
+       <Chip label={genero.name} color="primary"/>
+    </Grid>   
+  );
+}
+
 export default function Filmes() {
   const classes = stylesObject()
+  const [generos, setGeneros] = useState([])
+  const [filmes, setFilmes] = useState([])
+
+  useEffect(() => {
+    getGeneros((generosDb) => {
+      const auxGeneros = Object.entries(generosDb).map((g) => g[1])
+      setGeneros(auxGeneros)
+    })
+  }, [])
 
   return (
-    <Grid container direction="row" justify="space-between" alignItems="flex-start">
-      <Grid item xs={3}>
-        <Card>
-          <CardContent>
-            <Typography variant="outline">
-              nome do filme
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
+    <div>
+      <Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start">
+        {
+          generos.map((g) => chipGenero(g))
+        }
       </Grid>
-      <Grid item xs={3}>
-        genero 2
+      <Grid container direction="column">
+        blabla
       </Grid>
-      <Grid item xs={3}>
-        genero 3
-      </Grid>
-      <Grid item xs={3}>
-        genero 4
-      </Grid>
-    </Grid>
+    </div>
+    
   );
 }
