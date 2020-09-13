@@ -1,9 +1,12 @@
-import react from 'react';
-
+import React from 'react';
 
 function login(){
-    return(
+    
 
+    return(
+        <div>
+            
+        </div>
     );
 }
 

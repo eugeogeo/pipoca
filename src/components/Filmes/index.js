@@ -5,9 +5,16 @@ import {
   CardActions,
   CardContent,
   Chip,
+  IconButton,
   Grid,
+  List,
+  ListItem,
   Typography,
 } from '@material-ui/core'
+// import {
+//   Bookmark,
+//   CheckCircleOutline
+// } from '@material-ui/icons'
 
 import { stylesObject } from '../../assets/styles/stylesObject.js'
 
@@ -19,6 +26,28 @@ function chipGenero(genero) {
        <Chip label={genero.name} color="primary"/>
     </Grid>   
   );
+}
+
+function cardFilme() {
+  return (
+    <ListItem>
+      <Card>
+        <CardContent>
+          <Typography variant="outline">
+            nome do filme
+          </Typography>
+        </CardContent>
+        <CardActions>
+          {/* <IconButton color="primary">
+            <Bookmark/>
+          </IconButton>
+          <IconButton color="primary">
+            <CheckCircleOutline/>
+          </IconButton> */}
+        </CardActions>
+      </Card>
+    </ListItem>
+  )
 }
 
 export default function Filmes() {
@@ -41,9 +70,13 @@ export default function Filmes() {
         }
       </Grid>
       <Grid container direction="column">
-        blabla
+        <List>
+          {
+            //fazer o map nos filmes aqui e retornar cardFilme
+            cardFilme()
+          }
+        </List>
       </Grid>
     </div>
-    
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
+  Button,
   CssBaseline,
   Grid,
   ThemeProvider,
@@ -12,6 +13,8 @@ import Filmes from './components/Filmes'
 
 import { themeObject } from './assets/styles/themeObject.js'
 import { stylesObject } from './assets/styles/stylesObject.js'
+
+import {login} from './utils/firebase'
 
 const useDarkMode = () => {
   const [theme, setTheme] = useState(themeObject)
@@ -45,6 +48,9 @@ function App() {
   return (
     <ThemeProvider theme={themeConfig}>
       <CssBaseline/>
+      <Button onClick={login}> 
+        teste do login aqui
+      </Button>
       <Grid container direction="column" justify="center" alignItens="center">
         <Grid item xs={12}>
           <Typography variant="h4">
@@ -59,7 +65,6 @@ function App() {
           <Filmes/>
         </Grid>
       </Grid>
-  
     </ThemeProvider>
   );
 }
