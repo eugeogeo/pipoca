@@ -22,9 +22,9 @@ import { getGeneros } from '../../utils/tmdb.js'
 
 function chipGenero(genero) {
   return (
-    <Grid item>
-       <Chip label={genero.name} color="primary"/>
-    </Grid>   
+    <ListItem style={{padding: '8px'}}>
+      <Chip label={genero.name} color="primary"/>
+    </ListItem>   
   );
 }
 
@@ -64,11 +64,16 @@ export default function Filmes() {
 
   return (
     <div>
-      <Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start" className={classes.gridChipGenero}>
+      <List className={classes.flexList} style={{width: '100%', maxHeight: 50}}>
         {
           generos.map((g) => chipGenero(g))
         }
-      </Grid>
+      </List>
+      {/**<Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start" className={classes.gridChipGenero}>
+              {
+                generos.map((g) => chipGenero(g))
+              }
+            </Grid>**/}
       <Grid container direction="column">
         <List>
           {
