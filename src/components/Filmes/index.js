@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  CardHeader,
   Chip,
   IconButton,
   Grid,
@@ -11,11 +12,13 @@ import {
   ListItem,
   Typography,
 } from '@material-ui/core'
-// import {
-//   Bookmark,
-//   CheckCircleOutline
-// } from '@material-ui/icons'
-
+import {
+  Bookmark,
+  BookmarkBorder,
+  CheckCircle,
+  CheckCircleOutline
+} from '@material-ui/icons'
+import { Skeleton } from '@material-ui/lab'
 import { stylesObject } from '../../assets/styles/stylesObject.js'
 
 import { getGeneros } from '../../utils/tmdb.js'
@@ -32,18 +35,17 @@ function cardFilme() {
   return (
     <ListItem>
       <Card>
-        <CardContent>
-          <Typography variant="outline">
-            nome do filme
-          </Typography>
+        <CardContent style={{padding: '6px 10px'}}>
+          <Skeleton animation={false} variant="rect" width={238} height={118} />
         </CardContent>
-        <CardActions>
-          {/* <IconButton color="primary">
-            <Bookmark/>
+        <CardActions style={{padding: '6px 10px'}}>
+          <Typography variant="body1" style={{float: 'left'}}>Nome do filme</Typography>
+          <IconButton color="secondary" style={{float: 'right'}}>
+            <BookmarkBorder/>
           </IconButton>
-          <IconButton color="primary">
+          <IconButton color="secondary" style={{float: 'right'}}>
             <CheckCircleOutline/>
-          </IconButton> */}
+          </IconButton>
         </CardActions>
       </Card>
     </ListItem>

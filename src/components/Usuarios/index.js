@@ -14,7 +14,10 @@ import {
   Typography,
 } from '@material-ui/core'
 import { stylesObject } from '../../assets/styles/stylesObject.js'
-import { Favorite, Visibility } from '@material-ui/icons'
+import {
+  Favorite,
+  Visibility
+} from '@material-ui/icons'
 
 export default function Usuarios() {
   const classes = stylesObject()

@@ -16,6 +16,10 @@ export const stylesObject = makeStyles((theme) => ({
       backgroundColor: 'rgba(0,0,0,.1)',
     }
   },
+  sectionTitle: {
+  	marginLeft: '5px',
+  	height: 'fit-content'
+  },
   flexList: {
     display: 'flex',
     flexDirection: 'row',
