@@ -9,5 +9,14 @@ export const stylesObject = makeStyles((theme) => ({
     flexDirection: 'row',
     padding: 0,
     backgroundColor: theme.palette.background.paper,
-  }
+  },
+ 	userListItem: {
+ 		width: 'fit-content'
+ 	},
+ 	userCard: {
+ 		width: 'max-content'
+ 	},
+ 	gridChipGenero: {
+ 		margin: '0px'
+ 	}
 }))

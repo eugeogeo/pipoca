@@ -64,7 +64,7 @@ export default function Filmes() {
 
   return (
     <div>
-      <Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start">
+      <Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start" className={classes.gridChipGenero}>
         {
           generos.map((g) => chipGenero(g))
         }

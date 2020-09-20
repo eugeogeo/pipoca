@@ -15,35 +15,11 @@ export default function Usuarios() {
 
   return (
     <List className={classes.flexList}>
-      <ListItem>
-        <Card>
+      <ListItem className={classes.userListItem}>
+        <Card className={classes.userCard}>
           <CardContent>
             <Typography variant="outline">
-              nomeee
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-      </ListItem>
-      <ListItem>
-        <Card>
-          <CardContent>
-            <Typography variant="outline">
-              asdsdfsh
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-      </ListItem>
-      <ListItem>
-        <Card>
-          <CardContent>
-            <Typography variant="outline">
-              asdsdfsh
+              Samuel Campos
             </Typography>
           </CardContent>
           <CardActions>
