@@ -8,15 +8,18 @@ export const stylesObject = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     padding: 0,
-    backgroundColor: theme.palette.background.paper,
   },
  	userListItem: {
  		width: 'fit-content'
  	},
  	userCard: {
- 		width: 'max-content'
+ 		width: 'max-content',
+ 	},
+	userAvatar: {
+ 		backgroundColor: theme.palette.secondary.main
  	},
  	gridChipGenero: {
  		margin: '0px'
- 	}
+ 	},
+
 }))

@@ -1,14 +1,20 @@
 import React from 'react';
 import {
+  Avatar,
+  Badge,
   Button,
+  ButtonGroup,
   Card,
-  CardContent,
   CardActions,
+  CardContent,
+  CardHeader,
+  IconButton,
   List,
   ListItem,
   Typography,
 } from '@material-ui/core'
 import { stylesObject } from '../../assets/styles/stylesObject.js'
+import { Favorite, Visibility } from '@material-ui/icons'
 
 export default function Usuarios() {
   const classes = stylesObject()
@@ -17,14 +23,34 @@ export default function Usuarios() {
     <List className={classes.flexList}>
       <ListItem className={classes.userListItem}>
         <Card className={classes.userCard}>
-          <CardContent>
-            <Typography variant="outline">
-              Samuel Campos
-            </Typography>
+          <CardHeader
+            style={{padding: '6px 10px'}}
+            avatar={
+              <Avatar aria-label="recipe" className={classes.userAvatar}>
+                N
+              </Avatar>
+            }
+            // action={
+            //   <IconButton aria-label="settings">
+            //     <MoreVertIcon />
+            //   </IconButton>
+            // }
+            title={
+              <Typography variant="h6">Nome do user</Typography>
+            }
+          />
+          <CardContent style={{padding: '5px'}}>
+            <IconButton aria-label="cart">
+              <Badge badgeContent={4} color="secondary">
+                <Favorite color="error"/>
+              </Badge>
+            </IconButton>
+            <IconButton aria-label="cart">
+              <Badge badgeContent={4} color="secondary">
+                <Visibility />
+              </Badge>
+            </IconButton>
           </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
         </Card>
       </ListItem>
     </List>
