@@ -44,7 +44,7 @@ export async function login() {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // ...
-      }        
+      }        opa rs
       var user = result.user;
       console.log(result.user)
     }).catch(function(error) {

@@ -23,7 +23,7 @@ import { getGeneros } from '../../utils/tmdb.js'
 function chipGenero(genero) {
   return (
     <Grid item>
-       <Chip label={genero.name} color="primary"/>
+      <Chip label={genero.name} color="secondary"/>
     </Grid>   
   );
 }
