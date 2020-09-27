@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  CardHeader,
   Chip,
   IconButton,
   Grid,
@@ -11,20 +12,22 @@ import {
   ListItem,
   Typography,
 } from '@material-ui/core'
-// import {
-//   Bookmark,
-//   CheckCircleOutline
-// } from '@material-ui/icons'
-
+import {
+  Bookmark,
+  BookmarkBorder,
+  CheckCircle,
+  CheckCircleOutline
+} from '@material-ui/icons'
+import { Skeleton } from '@material-ui/lab'
 import { stylesObject } from '../../assets/styles/stylesObject.js'
 
 import { getGeneros } from '../../utils/tmdb.js'
 
 function chipGenero(genero) {
   return (
-    <Grid item>
+    <ListItem style={{padding: '8px'}}>
       <Chip label={genero.name} color="secondary"/>
-    </Grid>   
+    </ListItem>   
   );
 }
 
@@ -32,18 +35,17 @@ function cardFilme() {
   return (
     <ListItem>
       <Card>
-        <CardContent>
-          <Typography variant="outline">
-            nome do filme
-          </Typography>
+        <CardContent style={{padding: '6px 10px'}}>
+          <Skeleton animation={false} variant="rect" width={238} height={118} />
         </CardContent>
-        <CardActions>
-          {/* <IconButton color="primary">
-            <Bookmark/>
+        <CardActions style={{padding: '6px 10px'}}>
+          <Typography variant="body1" style={{float: 'left'}}>Nome do filme</Typography>
+          <IconButton color="secondary" style={{float: 'right'}}>
+            <BookmarkBorder/>
           </IconButton>
-          <IconButton color="primary">
+          <IconButton color="secondary" style={{float: 'right'}}>
             <CheckCircleOutline/>
-          </IconButton> */}
+          </IconButton>
         </CardActions>
       </Card>
     </ListItem>
@@ -64,11 +66,11 @@ export default function Filmes() {
 
   return (
     <div>
-      <Grid container direction="row" spacing={2} justify="flex-start" alignItems="flex-start">
+      <List className={classes.flexList} style={{width: '100%', maxHeight: 50}}>
         {
           generos.map((g) => chipGenero(g))
         }
-      </Grid>
+      </List>
       <Grid container direction="column">
         <List>
           {

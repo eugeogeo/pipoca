@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import {
   Button,
   CssBaseline,
+  IconButton,
   Grid,
   ThemeProvider,
   Typography,
 } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles'
 
+import { Brightness4 } from '@material-ui/icons'
 import Usuarios from './components/Usuarios'
 import Filmes from './components/Filmes'
 
@@ -53,13 +55,18 @@ function App() {
       </Button>
       <Grid container direction="column" justify="center" alignItens="center">
         <Grid item xs={12}>
-          <Typography variant="h4">
-            Usuários
-          </Typography>
+          <Grid container direction="row" justify="space-between" alignItems="center">
+            <Typography variant="h5" className={classes.sectionTitle}>
+              Usuários
+            </Typography>
+            <IconButton styles={{float: 'right'}} onClick={toogleDarkMode}>
+              <Brightness4 />
+            </IconButton>
+          </Grid>
           <Usuarios/>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="h4">
+          <Typography variant="h5" className={classes.sectionTitle}>
             Filmes
           </Typography>
           <Filmes/>

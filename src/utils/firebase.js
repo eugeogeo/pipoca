@@ -28,7 +28,6 @@ export function newUser(usuario){
 }
 
 export async function login() {
-
   //instancia do objeto provedor do google
   var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -44,7 +43,7 @@ export async function login() {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
         // ...
-      }        opa rs
+      }
       var user = result.user;
       console.log(result.user)
     }).catch(function(error) {
@@ -54,5 +53,4 @@ export async function login() {
       console.log(error.credential)
      
     });
-
 }
